@@ -1,17 +1,14 @@
 package com.emi.udemyapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.emi.udemyapp.ui.jettipapp.JetTipApp
+import com.emi.udemyapp.ui.movieapp.MovieApp
 import com.emi.udemyapp.ui.theme.UdemyAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +18,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             UdemyAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    JetTipApp(innerPadding)
+                    Log.e("TAG", "onCreate: $innerPadding", )
+                    MovieApp(innerPadding)
                 }
             }
         }
